@@ -1,8 +1,16 @@
 
 # Legajos
-Lista_Legajos = []
+Lista_Legajos = [
+    [1034, 'Carlos Alvarez', 28205770, 4], 
+    [1100, 'Marcos Moreno', 27267554, 4], 
+    [1103, 'Leonardo Garcia', 24975521, 5],
+    [1129, 'Claudio Valero', 28428046, 6],
+    [1130, 'Carlos Sanchez', 29768463, 4],
+    [1144, 'Juan Ramires', 17629924, 5]
+    ]
+
 # Escala Jornales
-Escala_Socaya = {"1":407, "2":440, "3":466, "4":480, "5":499, "6":519, "7":537, "8":556, "MinGar":522.48}
+Escala_Socaya = {1:407, 2:440, 3:466, 4:480, 5:499, 6:519, 7:537, 8:556, "MinGar":522.48}
 
 while (True):
     print(" -.-.- M E N U   I N G R E S O   D E   L E G A J O S -.-.- ")
@@ -78,8 +86,22 @@ while (True):
             print("")
             # Fin Legajo guardado
         # Fin Legajo Nuevo
-        elif (op == 2):
-            print("Proximamente")
+        elif (op == 2): #Busqueda de Legajo
+            while(True):
+                try:
+                    Busqueda_Legajo = int(input("Ingrese el Numero de legajo a buscar: "))
+                    if (Busqueda_Legajo <= 9999 and Busqueda_Legajo >= 0):
+                        print("Estamos en eso")
+                        break
+                    else:
+                        print("")
+                        print(" el legajo debe ser entre 0 y 9999")
+                        print("") 
+                except:
+                    print("")
+                    print("El legajo debe ser un numero")
+                    print("") 
+        # Fin Busqueda Legajo    
         elif (op == 3):
             print("Proximamente")
         elif (op == 9):
