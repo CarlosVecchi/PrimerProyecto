@@ -91,7 +91,16 @@ while (True):
                 try:
                     Busqueda_Legajo = int(input("Ingrese el Numero de legajo a buscar: "))
                     if (Busqueda_Legajo <= 9999 and Busqueda_Legajo >= 0):
-                        print("Estamos en eso")
+                        for leg in range(len(Lista_Legajos)):
+                            for i in range(len(Lista_Legajos[leg])):
+                                if Busqueda_Legajo== Lista_Legajos[leg][i]:
+                                    #print(Lista_Legajos[leg])
+                                    print("Legajo: ", Lista_Legajos[leg][0])
+                                    print("Nombre y Apellido: ", Lista_Legajos[leg][1])
+                                    print("DNI: ", Lista_Legajos[leg][2])
+                                    print("Categoria: ", Lista_Legajos[leg][3])
+                                    #print("Brutos del Semestre: ", Lista_Legajos[leg][4])
+                                    break
                         break
                     else:
                         print("")
